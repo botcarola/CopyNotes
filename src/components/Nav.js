@@ -1,4 +1,4 @@
-import { FcSettings } from "react-icons/fc";
+import { FcSettings, FcViewDetails } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
@@ -10,9 +10,14 @@ const Nav = () => {
                     CopyNotes
                 </h1>
             </Link>
-            <Link className="p-5 flex items-center text-2xl" to="/settings">
-                <FcSettings />
-            </Link>
+            <div className="flex">
+                <Link className="p-5 flex items-center text-2xl" to="/custom-notes">
+                    <FcViewDetails />
+                </Link>
+                <Link className="p-5 flex items-center text-2xl" to="/settings">
+                    <FcSettings />
+                </Link>
+            </div>
         </nav>
     )
 }
